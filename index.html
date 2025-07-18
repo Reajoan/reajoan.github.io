@@ -3,63 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Web Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    
+    <!-- SEO & Meta -->
     <title>MD. Reajoan - Graphic Designer & Branding Specialist | Portfolio</title>
     <meta name="description" content="Creative Graphic Designer & Branding Specialist with 5+ years of experience in packaging design and brand identities. Based in Dhaka, Bangladesh.">
     <meta name="keywords" content="graphic designer, branding, packaging design, Dhaka, Bangladesh, logo design, brand identity">
     <meta name="author" content="MD. Reajoan">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical & Social -->
     <link rel="canonical" href="https://reajoan.github.io/">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2310b981'/><text x='50' y='65' font-family='Arial' font-size='40' font-weight='bold' text-anchor='middle' fill='white'>MR</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2310b981'/><text x='50' y='65' font-family='Arial' font-size='40' font-weight='bold' text-anchor='middle' fill='white'>MR</text></svg>">
-    
-    <!-- Meta Tags -->
     <meta property="og:title" content="MD. Reajoan - Graphic Designer & Branding Specialist">
     <meta property="og:description" content="Creative Graphic Designer with 5+ years of experience in packaging design and brand identities.">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/29954535">
     <meta property="og:url" content="https://reajoan.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="MD. Reajoan Portfolio">
-    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MD. Reajoan - Graphic Designer & Branding Specialist">
     <meta name="twitter:description" content="Creative Graphic Designer with 5+ years of experience in packaging design and brand identities.">
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/29954535">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2310b981'/><text x='50' y='65' font-family='Arial' font-size='40' font-weight='bold' text-anchor='middle' fill='white'>MR</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2310b981'/><text x='50' y='65' font-family='Arial' font-size='40' font-weight='bold' text-anchor='middle' fill='white'>MR</text></svg>">
+    
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
     
-    <!-- Cloudflare Analytics -->
+	<!-- Cloudflare Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0176332ac2ba451c9e95d8b72faae0d6"}'></script>
-    
-    <!-- Google tag (gtag.js) -->
+	
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1ENNXK9CB"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-M1ENNXK9CB');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-M1ENNXK9CB');
     </script>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Graphic Design & Branding Services by MD. Reajoan",
-      "description": "Expert services in packaging design, brand identity development, logo design, and comprehensive graphic design solutions for businesses worldwide.",
-      "url": "https://reajoan.github.io/",
-      "founder": {
+        "@context": "https://schema.org",
         "@type": "Person",
         "name": "MD. Reajoan",
-        "url": "https://reajoan.github.io/"
-      }
+        "jobTitle": "Graphic Designer & Branding Specialist",
+        "description": "Creative graphic designer with 5+ years of experience in packaging design and brand identities.",
+        "url": "https://reajoan.github.io/",
+        "image": "https://avatars.githubusercontent.com/u/29954535",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dhaka",
+            "addressCountry": "Bangladesh"
+        },
+        "knowsAbout": ["Graphic Design", "Branding", "Packaging Design", "Web Design"],
+        "workLocation": {
+            "@type": "Place",
+            "name": "Dhaka, Bangladesh"
+        }
     }
     </script>
-
+    
     <style>
-        /* ===== CSS CUSTOM PROPERTIES ===== */
+        /* ===== MODERN CSS ARCHITECTURE ===== */
         :root {
             /* Light theme colors */
             --bg-primary: #ffffff;
@@ -109,7 +127,7 @@
             --transition-base: 0.3s ease;
             --transition-slow: 0.6s ease;
         }
-
+        
         [data-theme="dark"] {
             /* Dark theme colors */
             --bg-primary: #0f172a;
@@ -123,14 +141,14 @@
             --shadow-medium: rgba(0, 0, 0, 0.4);
             --gradient-hero: linear-gradient(135deg, #0f172a, #1e293b, #334155);
         }
-
+        
         /* ===== RESET & BASE STYLES ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
@@ -138,35 +156,35 @@
             background-color: var(--bg-primary);
             transition: background-color var(--transition-base), color var(--transition-base);
         }
-
+        
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 80px;
         }
-
+        
         /* ===== UTILITY CLASSES ===== */
         .container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 var(--spacing-md);
         }
-
+        
         .section {
             padding: var(--spacing-4xl) var(--spacing-md);
         }
-
+        
         .section-header {
             text-align: center;
             margin-bottom: var(--spacing-3xl);
         }
-
+        
         .section-title {
             font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-4xl));
             font-weight: bold;
             color: var(--text-primary);
             margin-bottom: var(--spacing-md);
         }
-
+        
         .section-divider {
             width: 5rem;
             height: 0.25rem;
@@ -174,16 +192,24 @@
             margin: 0 auto;
             border-radius: 2px;
         }
-
+        
         .grid {
             display: grid;
             gap: var(--spacing-xl);
         }
-
-        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); }
-        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
-        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); }
-
+        
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+        }
+        
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+        }
+        
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+        }
+        
         .card {
             background: var(--bg-primary);
             border-radius: var(--radius-xl);
@@ -192,32 +218,32 @@
             transition: transform var(--transition-base), box-shadow var(--transition-base);
             border: 1px solid var(--border-color);
         }
-
+        
         .card:hover {
             transform: translateY(-2px);
             box-shadow: 0 20px 25px var(--shadow-medium);
         }
-
+        
         .card-header {
             padding: var(--spacing-xl);
             border-bottom: 1px solid var(--border-color);
         }
-
+        
         .card-title {
             font-size: var(--font-size-2xl);
             font-weight: bold;
             color: var(--text-primary);
             margin-bottom: var(--spacing-sm);
         }
-
+        
         .card-subtitle {
             color: var(--text-secondary);
         }
-
+        
         .card-content {
             padding: var(--spacing-xl);
         }
-
+        
         .badge {
             display: inline-block;
             padding: var(--spacing-xs) var(--spacing-md);
@@ -225,22 +251,22 @@
             font-size: var(--font-size-sm);
             font-weight: 500;
         }
-
+        
         .badge-emerald {
             background: rgba(16, 185, 129, 0.1);
             color: var(--accent-primary);
         }
-
+        
         .badge-blue {
             background: rgba(59, 130, 246, 0.1);
             color: #3b82f6;
         }
-
+        
         .badge-orange {
             background: rgba(249, 115, 22, 0.1);
             color: #f97316;
         }
-
+        
         .btn {
             display: inline-flex;
             align-items: center;
@@ -254,29 +280,29 @@
             border: none;
             font-size: var(--font-size-base);
         }
-
+        
         .btn-primary {
             background: var(--gradient-primary);
             color: white;
             box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
         }
-
+        
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
         }
-
+        
         .btn-secondary {
             background: var(--bg-primary);
             color: var(--text-primary);
             border: 2px solid var(--border-color);
         }
-
+        
         .btn-secondary:hover {
             background: var(--bg-secondary);
             transform: translateY(-2px);
         }
-
+        
         /* ===== NAVIGATION ===== */
         .nav {
             background: var(--bg-primary);
@@ -290,20 +316,20 @@
             z-index: 1000;
             transition: all var(--transition-base);
         }
-
+        
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: var(--spacing-md);
         }
-
+        
         .nav-brand {
             display: flex;
             align-items: center;
             gap: var(--spacing-md);
         }
-
+        
         .nav-logo {
             width: 2.5rem;
             height: 2.5rem;
@@ -317,28 +343,28 @@
             font-size: var(--font-size-lg);
             transition: transform var(--transition-base);
         }
-
+        
         .nav-logo:hover {
             transform: scale(1.05);
         }
-
+        
         .nav-title {
             font-size: var(--font-size-xl);
             font-weight: bold;
             color: var(--text-primary);
         }
-
+        
         .nav-menu {
             display: flex;
             align-items: center;
             gap: var(--spacing-xl);
         }
-
+        
         .nav-links {
             display: none;
             gap: var(--spacing-xl);
         }
-
+        
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
@@ -346,11 +372,11 @@
             transition: color var(--transition-base);
             position: relative;
         }
-
+        
         .nav-links a:hover {
             color: var(--accent-primary);
         }
-
+        
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -361,11 +387,11 @@
             background: var(--accent-primary);
             transition: width var(--transition-base);
         }
-
+        
         .nav-links a:hover::after {
             width: 100%;
         }
-
+        
         .theme-toggle {
             background: var(--bg-secondary);
             border: 1px solid var(--border-color);
@@ -379,19 +405,18 @@
             height: 2.5rem;
             transition: all var(--transition-base);
         }
-
+        
         .theme-toggle:hover {
             background: var(--bg-tertiary);
             transform: scale(1.05);
         }
-
+        
         .theme-toggle svg {
             width: 1.25rem;
             height: 1.25rem;
             color: var(--text-primary);
         }
-
-        /* Enhanced Mobile Menu */
+        
         .mobile-menu-btn {
             display: block;
             background: none;
@@ -401,14 +426,14 @@
             position: relative;
             z-index: 1001;
         }
-
+        
         .mobile-menu-btn svg {
             width: 1.5rem;
             height: 1.5rem;
             color: var(--text-primary);
             transition: transform var(--transition-base);
         }
-
+        
         .mobile-menu {
             position: fixed;
             top: 0;
@@ -425,11 +450,11 @@
             align-items: center;
             gap: var(--spacing-xl);
         }
-
+        
         .mobile-menu.active {
             transform: translateX(0);
         }
-
+        
         .mobile-menu a {
             color: var(--text-primary);
             text-decoration: none;
@@ -437,11 +462,11 @@
             font-weight: 600;
             transition: color var(--transition-base);
         }
-
+        
         .mobile-menu a:hover {
             color: var(--accent-primary);
         }
-
+        
         /* ===== HERO SECTION ===== */
         .hero {
             background: var(--gradient-hero);
@@ -450,7 +475,7 @@
             position: relative;
             overflow: hidden;
         }
-
+        
         .hero::before {
             content: '';
             position: absolute;
@@ -461,12 +486,12 @@
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
             animation: float 20s ease-in-out infinite;
         }
-
+        
         .hero-content {
             position: relative;
             z-index: 2;
         }
-
+        
         .hero-avatar {
             width: 10rem;
             height: 10rem;
@@ -483,7 +508,7 @@
             animation: pulse 2s ease-in-out infinite;
             position: relative;
         }
-
+        
         .hero-avatar::before {
             content: '';
             position: absolute;
@@ -497,7 +522,7 @@
             opacity: 0.3;
             animation: pulse 2s ease-in-out infinite reverse;
         }
-
+        
         .hero-name {
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: bold;
@@ -508,20 +533,20 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
+        
         .hero-title {
             font-size: clamp(var(--font-size-xl), 3vw, var(--font-size-3xl));
             color: var(--accent-primary);
             font-weight: 600;
             margin-bottom: var(--spacing-sm);
         }
-
+        
         .hero-subtitle {
             font-size: clamp(var(--font-size-base), 2.5vw, var(--font-size-2xl));
             color: var(--text-secondary);
             margin-bottom: var(--spacing-xl);
         }
-
+        
         .hero-description {
             font-size: var(--font-size-lg);
             color: var(--text-muted);
@@ -529,7 +554,7 @@
             margin: 0 auto var(--spacing-2xl);
             line-height: 1.7;
         }
-
+        
         .hero-contact {
             display: flex;
             flex-wrap: wrap;
@@ -537,7 +562,7 @@
             gap: var(--spacing-xl);
             margin-bottom: var(--spacing-2xl);
         }
-
+        
         .contact-item {
             display: flex;
             align-items: center;
@@ -548,38 +573,38 @@
             box-shadow: 0 4px 6px var(--shadow-light);
             transition: transform var(--transition-base), box-shadow var(--transition-base);
         }
-
+        
         .contact-item:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 15px var(--shadow-medium);
         }
-
+        
         .contact-item svg {
             width: 1.25rem;
             height: 1.25rem;
             color: var(--accent-primary);
         }
-
+        
         .hero-cta {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: var(--spacing-md);
         }
-
+        
         /* ===== STATS SECTION ===== */
         .stats {
             background: var(--bg-primary);
             padding: var(--spacing-3xl) var(--spacing-md);
             border-top: 1px solid var(--border-color);
         }
-
+        
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: var(--spacing-xl);
         }
-
+        
         .stat-item {
             text-align: center;
             padding: var(--spacing-xl) var(--spacing-md);
@@ -587,12 +612,12 @@
             border-radius: var(--radius-xl);
             transition: transform var(--transition-base), box-shadow var(--transition-base);
         }
-
+        
         .stat-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px var(--shadow-light);
         }
-
+        
         .stat-number {
             font-size: var(--font-size-5xl);
             font-weight: bold;
@@ -602,41 +627,41 @@
             background-clip: text;
             margin-bottom: var(--spacing-sm);
         }
-
+        
         .stat-label {
             color: var(--text-secondary);
             font-weight: 500;
         }
-
-        /* ===== ENHANCED CLIENT CAROUSEL ===== */
+        
+        /* ===== CLIENT CAROUSEL ===== */
         .clients {
             background: var(--bg-secondary);
             padding: var(--spacing-3xl) var(--spacing-md);
             overflow: hidden;
         }
-
+        
         .carousel-container {
             position: relative;
             overflow: hidden;
             mask-image: linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%);
             -webkit-mask-image: linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%);
         }
-
+        
         .carousel-track {
             display: flex;
             animation: infinite-scroll 40s linear infinite;
             gap: var(--spacing-2xl);
         }
-
+        
         .carousel-track:hover {
             animation-play-state: paused;
         }
-
+        
         @keyframes infinite-scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
-
+        
         .client-logo {
             flex-shrink: 0;
             width: 150px;
@@ -652,20 +677,20 @@
             transition: transform var(--transition-base);
             border: 1px solid var(--border-color);
         }
-
+        
         .client-logo:hover {
             transform: scale(1.05);
         }
-
+        
         /* ===== FEATURE CARDS ===== */
         .why-choose {
             background: var(--bg-primary);
         }
-
+        
         .why-choose-grid {
             margin-top: var(--spacing-2xl);
         }
-
+        
         .feature-card {
             background: var(--bg-secondary);
             padding: var(--spacing-xl);
@@ -674,12 +699,12 @@
             transition: transform var(--transition-base), box-shadow var(--transition-base);
             border: 1px solid var(--border-color);
         }
-
+        
         .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px var(--shadow-light);
         }
-
+        
         .feature-icon {
             width: 4rem;
             height: 4rem;
@@ -690,35 +715,35 @@
             justify-content: center;
             margin: 0 auto var(--spacing-lg);
         }
-
+        
         .feature-icon svg {
             width: 2rem;
             height: 2rem;
             color: white;
         }
-
+        
         .feature-title {
             font-size: var(--font-size-2xl);
             font-weight: bold;
             color: var(--text-primary);
             margin-bottom: var(--spacing-md);
         }
-
+        
         .feature-description {
             color: var(--text-secondary);
             line-height: 1.6;
         }
-
+        
         /* ===== FAQ SECTION ===== */
         .faq {
             background: var(--bg-secondary);
         }
-
+        
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
-
+        
         .faq-item {
             background: var(--bg-primary);
             border-radius: var(--radius-md);
@@ -726,7 +751,7 @@
             border: 1px solid var(--border-color);
             overflow: hidden;
         }
-
+        
         .faq-question {
             width: 100%;
             padding: var(--spacing-lg);
@@ -742,52 +767,52 @@
             align-items: center;
             transition: background-color var(--transition-base);
         }
-
+        
         .faq-question:hover {
             background: var(--bg-secondary);
         }
-
+        
         .faq-question svg {
             width: 1.25rem;
             height: 1.25rem;
             transition: transform var(--transition-base);
         }
-
+        
         .faq-item.active .faq-question svg {
             transform: rotate(180deg);
         }
-
+        
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height var(--transition-base);
         }
-
+        
         .faq-item.active .faq-answer {
             max-height: 200px;
         }
-
+        
         .faq-answer-content {
             padding: 0 var(--spacing-lg) var(--spacing-lg);
             color: var(--text-secondary);
             line-height: 1.6;
         }
-
+        
         /* ===== EXPERIENCE SECTION ===== */
         .experience-card {
             border-left: 4px solid var(--accent-primary);
         }
-
+        
         .experience-card.secondary {
             border-left-color: var(--accent-secondary);
         }
-
+        
         .experience-header {
             display: flex;
             flex-direction: column;
             gap: var(--spacing-md);
         }
-
+        
         .company-info {
             display: flex;
             align-items: center;
@@ -797,17 +822,17 @@
             font-size: var(--font-size-lg);
             margin-top: var(--spacing-sm);
         }
-
+        
         .company-info svg {
             width: 1.25rem;
             height: 1.25rem;
         }
-
+        
         .achievement-list {
             list-style: none;
             padding: 0;
         }
-
+        
         .achievement-item {
             display: flex;
             align-items: flex-start;
@@ -815,7 +840,7 @@
             margin-bottom: var(--spacing-md);
             color: var(--text-secondary);
         }
-
+        
         .achievement-icon {
             width: 1rem;
             height: 1rem;
@@ -823,12 +848,12 @@
             margin-top: var(--spacing-xs);
             flex-shrink: 0;
         }
-
+        
         /* ===== SKILLS SECTION ===== */
         .skill-card {
             text-align: center;
         }
-
+        
         .skill-icon {
             width: 4rem;
             height: 4rem;
@@ -838,24 +863,35 @@
             align-items: center;
             justify-content: center;
         }
-
-        .skill-icon.purple { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
-        .skill-icon.blue { background: linear-gradient(135deg, #3b82f6, #2563eb); }
-        .skill-icon.emerald { background: linear-gradient(135deg, #10b981, #059669); }
-        .skill-icon.pink { background: linear-gradient(135deg, #ec4899, #db2777); }
-
+        
+        .skill-icon.purple {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+        
+        .skill-icon.blue {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+        
+        .skill-icon.emerald {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+        
+        .skill-icon.pink {
+            background: linear-gradient(135deg, #ec4899, #db2777);
+        }
+        
         .skill-icon svg {
             width: 2rem;
             height: 2rem;
             color: white;
         }
-
+        
         .skill-badges {
             display: flex;
             flex-direction: column;
             gap: var(--spacing-sm);
         }
-
+        
         .skill-badge {
             padding: var(--spacing-sm);
             text-align: center;
@@ -863,24 +899,24 @@
             border-radius: var(--radius-sm);
             transition: background-color var(--transition-fast);
         }
-
+        
         .skill-badge:hover {
             background: var(--bg-tertiary);
         }
-
+        
         /* ===== CONTACT SECTION ===== */
         .contact {
             background: var(--gradient-primary);
             color: white;
             text-align: center;
         }
-
+        
         .contact-title {
             font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-4xl));
             font-weight: bold;
             margin-bottom: var(--spacing-md);
         }
-
+        
         .contact-divider {
             width: 5rem;
             height: 0.25rem;
@@ -888,7 +924,7 @@
             margin: 0 auto var(--spacing-xl);
             border-radius: 2px;
         }
-
+        
         .contact-description {
             font-size: var(--font-size-xl);
             color: rgba(255, 255, 255, 0.9);
@@ -896,14 +932,14 @@
             margin: 0 auto var(--spacing-2xl);
             line-height: 1.6;
         }
-
+        
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: var(--spacing-xl);
         }
-
+        
         .contact-info-item {
             display: flex;
             align-items: center;
@@ -914,17 +950,17 @@
             backdrop-filter: blur(10px);
             transition: transform var(--transition-base);
         }
-
+        
         .contact-info-item:hover {
             transform: translateY(-2px);
             background: rgba(255, 255, 255, 0.15);
         }
-
+        
         .contact-info-item svg {
             width: 1.25rem;
             height: 1.25rem;
         }
-
+        
         /* ===== FOOTER ===== */
         .footer {
             background: var(--bg-tertiary);
@@ -933,7 +969,7 @@
             text-align: center;
             border-top: 1px solid var(--border-color);
         }
-
+        
         .footer-brand {
             display: flex;
             align-items: center;
@@ -941,7 +977,7 @@
             gap: var(--spacing-md);
             margin-bottom: var(--spacing-md);
         }
-
+        
         .footer-logo {
             width: 2.5rem;
             height: 2.5rem;
@@ -954,18 +990,18 @@
             font-weight: bold;
             font-size: var(--font-size-base);
         }
-
+        
         .footer-title {
             font-size: var(--font-size-xl);
             font-weight: bold;
             color: var(--text-primary);
         }
-
+        
         .footer-divider {
             border-top: 1px solid var(--border-color);
             padding-top: var(--spacing-lg);
         }
-
+        
         /* ===== PERSONAL DETAILS ===== */
         .detail-row {
             display: flex;
@@ -974,33 +1010,33 @@
             padding-bottom: var(--spacing-md);
             border-bottom: 1px solid var(--border-color);
         }
-
+        
         .detail-label {
             color: var(--text-secondary);
         }
-
+        
         .detail-value {
             font-weight: 600;
             color: var(--text-primary);
         }
-
+        
         .languages-section {
             margin-top: var(--spacing-lg);
         }
-
+        
         .languages-title {
             margin-bottom: var(--spacing-md);
             color: var(--text-primary);
             font-weight: 600;
         }
-
+        
         .language-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: var(--spacing-md);
         }
-
+        
         /* ===== SCROLL TO TOP BUTTON ===== */
         .scroll-to-top {
             position: fixed;
@@ -1022,170 +1058,128 @@
             transition: all var(--transition-base);
             z-index: 1000;
         }
-
+        
         .scroll-to-top.visible {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
-
+        
         .scroll-to-top:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
         }
-
+        
         .scroll-to-top svg {
             width: 1.25rem;
             height: 1.25rem;
         }
-
+        
         /* ===== ANIMATIONS ===== */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
-
+        
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
-
+        
         @keyframes fadeIn {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
+        
         @keyframes pulse-loading {
             0%, 100% { opacity: 0.6; }
             50% { opacity: 1; }
         }
-
+        
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
             animation: fadeIn 0.6s ease forwards;
         }
-
+        
         .scroll-animate {
             opacity: 0;
             transform: translateY(30px);
             transition: all var(--transition-slow);
         }
-
+        
         .scroll-animate.animate {
             opacity: 1;
             transform: translateY(0);
         }
-
+        
         .email-loading, .phone-loading {
             opacity: 0.6;
             animation: pulse-loading 1.5s ease-in-out infinite;
         }
-
+        
         .email-loaded, .phone-loaded {
             opacity: 1;
             transition: opacity var(--transition-base);
         }
-
+        
         /* ===== LAZY LOADING SKELETON ===== */
         .skeleton {
             background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--bg-tertiary) 50%, var(--bg-secondary) 75%);
             background-size: 200% 100%;
             animation: loading 1.5s infinite;
         }
-
+        
         @keyframes loading {
             0% { background-position: 200% 0; }
             100% { background-position: -200% 0; }
         }
-
+        
         /* ===== RESPONSIVE DESIGN ===== */
         @media (min-width: 768px) {
             .nav-links { display: flex; }
             .mobile-menu-btn { display: none; }
-            .experience-header {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
+            .experience-header { flex-direction: row; justify-content: space-between; align-items: center; }
         }
-
+        
         @media (max-width: 768px) {
-            .hero {
-                padding: 6rem var(--spacing-md) var(--spacing-3xl);
-            }
-            
-            .hero-contact {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .contact-item {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            
-            .scroll-to-top {
-                bottom: 1rem;
-                right: 1rem;
-                width: 2.5rem;
-                height: 2.5rem;
-            }
-            
-            .scroll-to-top svg {
-                width: 1rem;
-                height: 1rem;
-            }
+            .hero { padding: 6rem var(--spacing-md) var(--spacing-3xl); }
+            .hero-contact { flex-direction: column; align-items: center; }
+            .contact-item { width: 100%; max-width: 300px; justify-content: center; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .scroll-to-top { bottom: 1rem; right: 1rem; width: 2.5rem; height: 2.5rem; }
+            .scroll-to-top svg { width: 1rem; height: 1rem; }
         }
-
+        
         @media (max-width: 480px) {
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 250px;
-                justify-content: center;
-            }
+            .stats-grid { grid-template-columns: 1fr; }
+            .hero-cta { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 250px; justify-content: center; }
         }
-
+        
         /* ===== PERFORMANCE OPTIMIZATIONS ===== */
         .text-content {
             margin-bottom: var(--spacing-lg);
             line-height: 1.7;
             color: var(--text-secondary);
         }
-
+        
         .office-info {
             margin-bottom: var(--spacing-md);
             color: var(--text-secondary);
         }
-
+        
         /* Reduce motion for users who prefer it */
         @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
+            *, *::before, *::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
             }
         }
-
+        
         /* High contrast mode support */
         @media (prefers-contrast: high) {
             :root {
@@ -1200,12 +1194,13 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
             <div class="nav-brand">
-                <div class="nav-logo">MR</div>
+                <div class="nav-logo" aria-label="MD Reajoan Logo">MR</div>
                 <span class="nav-title">MD. REAJOAN</span>
             </div>
             <div class="nav-menu">
@@ -1217,16 +1212,16 @@
                     <a href="#faq">FAQ</a>
                     <a href="#contact">Contact</a>
                 </div>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+                    <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
                     </svg>
-                    <svg class="moon-icon" style="display: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="moon-icon" style="display: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
                     </svg>
                 </button>
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
@@ -1234,8 +1229,8 @@
         </div>
     </nav>
 
-    <!-- Enhanced Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation menu">
         <a href="#about" onclick="closeMobileMenu()">About</a>
         <a href="#why-choose" onclick="closeMobileMenu()">Why Choose Me</a>
         <a href="#experience" onclick="closeMobileMenu()">Experience</a>
@@ -1245,49 +1240,46 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" role="banner">
         <div class="container">
             <div class="hero-content fade-in">
-                <div class="hero-avatar">MR</div>
+                <div class="hero-avatar" aria-label="MD Reajoan Avatar">MR</div>
                 <h1 class="hero-name">MD. REAJOAN</h1>
                 <p class="hero-title">Graphic Designer & Branding Specialist</p>
                 <p class="hero-subtitle">Packaging Design Expert</p>
                 <p class="hero-description">
-                    Transforming brands through innovative design solutions with 5+ years of experience in packaging design, 
-                    brand identity development, and creative visual storytelling for leading companies across Bangladesh.
+                    Transforming brands through innovative design solutions with 5+ years of experience in packaging design, brand identity development, and creative visual storytelling for leading companies across Bangladesh.
                 </p>
-                
                 <div class="hero-contact">
                     <div class="contact-item">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                         </svg>
                         <span>Dhaka, Bangladesh</span>
                     </div>
                     <div class="contact-item">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                         <span id="email-hero" class="email-loading">Loading...</span>
                     </div>
                     <div class="contact-item">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                         </svg>
                         <span id="phone-hero" class="phone-loading">Loading...</span>
                     </div>
                 </div>
-
                 <div class="hero-cta">
                     <a href="#contact" class="btn btn-primary">
-                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
                         </svg>
                         Let's Talk
                     </a>
                     <a href="#why-choose" class="btn btn-secondary">
-                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                         Learn More
@@ -1321,7 +1313,7 @@
         </div>
     </section>
 
-    <!-- Enhanced Client Logos Carousel -->
+    <!-- Client Carousel -->
     <section class="clients">
         <div class="container">
             <div class="section-header scroll-animate">
@@ -1370,7 +1362,7 @@
             <div class="grid grid-3 why-choose-grid">
                 <div class="feature-card scroll-animate">
                     <div class="feature-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                         </svg>
                     </div>
@@ -1381,7 +1373,7 @@
                 </div>
                 <div class="feature-card scroll-animate">
                     <div class="feature-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
@@ -1392,7 +1384,7 @@
                 </div>
                 <div class="feature-card scroll-animate">
                     <div class="feature-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
                     </div>
@@ -1403,7 +1395,7 @@
                 </div>
                 <div class="feature-card scroll-animate">
                     <div class="feature-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                         </svg>
                     </div>
@@ -1414,7 +1406,7 @@
                 </div>
                 <div class="feature-card scroll-animate">
                     <div class="feature-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
@@ -1425,7 +1417,7 @@
                 </div>
                 <div class="feature-card scroll-animate">
                     <div class="feature-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
                         </svg>
                     </div>
@@ -1447,9 +1439,9 @@
             </div>
             <div class="faq-container">
                 <div class="faq-item scroll-animate">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-expanded="false">
                         What services do you offer?
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
@@ -1460,9 +1452,9 @@
                     </div>
                 </div>
                 <div class="faq-item scroll-animate">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-expanded="false">
                         What is your typical project timeline?
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
@@ -1473,9 +1465,9 @@
                     </div>
                 </div>
                 <div class="faq-item scroll-animate">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-expanded="false">
                         Do you provide revisions?
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
@@ -1486,9 +1478,9 @@
                     </div>
                 </div>
                 <div class="faq-item scroll-animate">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-expanded="false">
                         What file formats do you deliver?
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
@@ -1499,22 +1491,22 @@
                     </div>
                 </div>
                 <div class="faq-item scroll-animate">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-expanded="false">
                         How do you handle payments?
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            I typically require 50% upfront payment to begin work, with the remaining 50% due upon project completion. I accept bank transfers, mobile banking (bKash), Google pay and Crypto payment methods.
+                            I typically require 50% upfront payment to begin work, with the remaining 50% due upon project completion. I accept bank transfers, mobile banking (bKash), Google Pay and Crypto payment methods.
                         </div>
                     </div>
                 </div>
                 <div class="faq-item scroll-animate">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-expanded="false">
                         Can you work with international clients?
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
@@ -1535,7 +1527,6 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="section-divider"></div>
             </div>
-
             <div class="grid grid-2">
                 <div class="card scroll-animate">
                     <div class="card-header">
@@ -1543,18 +1534,13 @@
                     </div>
                     <div class="card-content">
                         <p class="text-content">
-                            Creative Graphic Designer & Branding Specialist with 5+ years of experience creating compelling
-                            packaging designs and brand identities. Expert in Adobe Creative Suite with specialized knowledge 
-                            in CTP and cylinder-ready file preparation for print production.
+                            Creative Graphic Designer & Branding Specialist with 5+ years of experience creating compelling packaging designs and brand identities. Expert in Adobe Creative Suite with specialized knowledge in CTP and cylinder-ready file preparation for print production.
                         </p>
                         <p class="text-content">
-                            Skilled in digital design principles with a proven track record of delivering consistent,
-                            high-quality visuals for major brands. I combine artistic vision with technical expertise to 
-                            develop innovative design solutions that bridge print and digital media.
+                            Skilled in digital design principles with a proven track record of delivering consistent, high-quality visuals for major brands. I combine artistic vision with technical expertise to develop innovative design solutions that bridge print and digital media.
                         </p>
                     </div>
                 </div>
-
                 <div class="card scroll-animate">
                     <div class="card-header">
                         <h3 class="card-title">Personal Details</h3>
@@ -1600,7 +1586,6 @@
                 <h2 class="section-title">Work Experience</h2>
                 <div class="section-divider"></div>
             </div>
-
             <div class="experience-timeline">
                 <div class="card experience-card scroll-animate">
                     <div class="card-header">
@@ -1608,7 +1593,7 @@
                             <div>
                                 <h3 class="card-title">Graphic Designer</h3>
                                 <div class="company-info">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H3m2 0h4M9 7h1m-1 4h1m4-4h1m-1 4h1m-3-5V6a2 2 0 012-2h2a2 2 0 012 2v1M9 7V6a2 2 0 012-2h2a2 2 0 012 2v1"/>
                                     </svg>
                                     Repack Packaging
@@ -1623,13 +1608,13 @@
                         </div>
                         <ul class="achievement-list">
                             <li class="achievement-item">
-                                <svg class="achievement-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="achievement-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
                                 Designed branding and packaging for major brands including Naturo, Shajgoj, Fabrilife, 4 Cheez, FM Plastic Industries PLC, Secret Recipe & others
                             </li>
                             <li class="achievement-item">
-                                <svg class="achievement-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="achievement-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
                                 Led creative direction for packaging, branding, and advertising campaigns
@@ -1637,14 +1622,13 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="card experience-card secondary scroll-animate">
                     <div class="card-header">
                         <div class="experience-header">
                             <div>
                                 <h3 class="card-title">Graphic Designer</h3>
                                 <div class="company-info" style="color: var(--accent-secondary);">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H3m2 0h4M9 7h1m-1 4h1m4-4h1m-1 4h1m-3-5V6a2 2 0 012-2h2a2 2 0 012 2v1M9 7V6a2 2 0 012-2h2a2 2 0 012 2v1"/>
                                     </svg>
                                     Cherry Color BD
@@ -1659,16 +1643,16 @@
                         </div>
                         <ul class="achievement-list">
                             <li class="achievement-item">
-                                <svg class="achievement-icon" style="color: var(--accent-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="achievement-icon" style="color: var(--accent-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
                                 Produced design content for brands like Sheltech Pvt, Unique Group, RFL Xpart, Metal Pvt, Hatim Group, and more
                             </li>
                             <li class="achievement-item">
-                                <svg class="achievement-icon" style="color: var(--accent-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="achievement-icon" style="color: var(--accent-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
-                                Developed and maintained the official website Cherrycolorbd [dot] com, optimizing UX/UI
+                                Developed and maintained the official website Cherrycolorbd.com, optimizing UX/UI
                             </li>
                         </ul>
                     </div>
@@ -1684,12 +1668,11 @@
                 <h2 class="section-title">Skills & Expertise</h2>
                 <div class="section-divider"></div>
             </div>
-
             <div class="grid grid-4">
                 <div class="card skill-card scroll-animate">
                     <div class="card-header">
                         <div class="skill-icon purple">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"/>
                             </svg>
                         </div>
@@ -1703,11 +1686,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card skill-card scroll-animate">
                     <div class="card-header">
                         <div class="skill-icon blue">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
                         </div>
@@ -1721,11 +1703,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card skill-card scroll-animate">
                     <div class="card-header">
                         <div class="skill-icon emerald">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                             </svg>
                         </div>
@@ -1739,11 +1720,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card skill-card scroll-animate">
                     <div class="card-header">
                         <div class="skill-icon pink">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                             </svg>
                         </div>
@@ -1767,25 +1747,23 @@
             <h2 class="contact-title">Let's Work Together</h2>
             <div class="contact-divider"></div>
             <p class="contact-description">
-                Ready to bring your brand vision to life? I'm passionate about creating designs that tell your story and
-                connect with your audience. Let's discuss your next project.
+                Ready to bring your brand vision to life? I'm passionate about creating designs that tell your story and connect with your audience. Let's discuss your next project.
             </p>
-
             <div class="contact-info">
                 <div class="contact-info-item">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                     </svg>
                     <span id="email-contact" class="email-loading">Loading...</span>
                 </div>
                 <div class="contact-info-item">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                     </svg>
                     <span id="phone-contact" class="phone-loading">Loading...</span>
                 </div>
                 <div class="contact-info-item">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                     </svg>
@@ -1796,14 +1774,13 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-brand">
-                <div class="footer-logo">MR</div>
+                <div class="footer-logo" aria-label="MD Reajoan Footer Logo">MR</div>
                 <span class="footer-title">MD. REAJOAN</span>
             </div>
             <p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);">Graphic Designer | Packaging & Branding Specialist</p>
-
             <div class="footer-divider">
                 <p style="margin-bottom: var(--spacing-sm);">&copy; 2024 MD. Reajoan. All rights reserved.</p>
                 <p style="font-size: var(--font-size-sm);">Content licensed under CC BY-NC-ND 4.0 International.</p>
@@ -1813,570 +1790,573 @@
 
     <!-- Scroll to Top Button -->
     <a href="#" class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
         </svg>
     </a>
 
-<script>
-    // ==================== MILITARY GRADE SECURE CONTACT SYSTEM ====================
-    console.warn('🔒 CLASSIFIED: Military-grade contact protection active');
+    <script>
+        // ==================== SECURE CONTACT SYSTEM ==================== 
+        console.warn('🔒 CLASSIFIED: Military-grade contact protection active by Md.Reajoan');
 
-    // Performance optimized JavaScript
-    const debounce = (func, wait) => {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
+        // Performance optimized JavaScript
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
                 clearTimeout(timeout);
-                func(...args);
+                timeout = setTimeout(later, wait);
             };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
         };
-    };
 
-    // Theme Toggle Functionality
-    const themeToggle = document.getElementById('themeToggle');
-    const sunIcon = themeToggle.querySelector('.sun-icon');
-    const moonIcon = themeToggle.querySelector('.moon-icon');
-    
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    
-    if (currentTheme === 'dark') {
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
-    }
-    
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        
-        if (newTheme === 'dark') {
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const sunIcon = themeToggle.querySelector('.sun-icon');
+        const moonIcon = themeToggle.querySelector('.moon-icon');
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        if (currentTheme === 'dark') {
             sunIcon.style.display = 'none';
             moonIcon.style.display = 'block';
-        } else {
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
         }
-    });
 
-    // Enhanced Mobile Menu
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
-    function toggleMobileMenu() {
-        mobileMenu.classList.toggle('active');
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    }
-    
-    function closeMobileMenu() {
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    
-    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-    
-    // Close mobile menu when clicking outside
-    mobileMenu.addEventListener('click', (e) => {
-        if (e.target === mobileMenu) {
-            closeMobileMenu();
-        }
-    });
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-    // FAQ Functionality
-    document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', () => {
-            const faqItem = question.parentElement;
-            const isActive = faqItem.classList.contains('active');
-            
-            // Close all FAQ items
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            // Open clicked item if it wasn't active
-            if (!isActive) {
-                faqItem.classList.add('active');
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            if (newTheme === 'dark') {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            } else {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
             }
         });
-    });
 
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+        // Enhanced Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                closeMobileMenu();
+            }
+        });
+
+        // FAQ Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
                 });
-            }
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    question.setAttribute('aria-expanded', 'true');
+                }
+            });
         });
-    });
 
-    // Optimized scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
-    }, observerOptions);
 
-    // Use requestIdleCallback for better performance
-    if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
+        // Optimized scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Use requestIdleCallback for better performance
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => {
+                document.querySelectorAll('.scroll-animate').forEach(el => {
+                    observer.observe(el);
+                });
+            });
+        } else {
             document.querySelectorAll('.scroll-animate').forEach(el => {
                 observer.observe(el);
             });
-        });
-    } else {
-        document.querySelectorAll('.scroll-animate').forEach(el => {
-            observer.observe(el);
-        });
-    }
-
-    // Counter animation for stats
-    function animateCounter(element, target, duration = 2000) {
-        let start = 0;
-        const increment = target / (duration / 16);
-        
-        function updateCounter() {
-            start += increment;
-            if (start < target) {
-                element.textContent = Math.floor(start) + (target === 100 ? '%' : target >= 1000 ? '+' : '');
-                requestAnimationFrame(updateCounter);
-            } else {
-                element.textContent = target + (target === 100 ? '%' : target >= 1000 ? '+' : '');
-            }
         }
-        updateCounter();
-    }
 
-    // Trigger counter animation when stats section is visible
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counters = entry.target.querySelectorAll('[data-count]');
-                counters.forEach(counter => {
-                    const target = parseInt(counter.getAttribute('data-count'));
-                    animateCounter(counter, target);
-                });
-                statsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
+        // Counter animation for stats
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
 
-    const statsSection = document.querySelector('.stats-grid');
-    if (statsSection) {
-        statsObserver.observe(statsSection);
-    }
-
-    // Scroll to Top Button
-    const scrollToTopBtn = document.getElementById('scrollToTop');
-
-    const handleScroll = debounce(() => {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
-        }
-    }, 100);
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    scrollToTopBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    // ==================== MILITARY GRADE CONTACT PROTECTION ====================
-    
-    // 1. Advanced Quantum-Level Encryption System
-    const QuantumVault = {
-        // Multi-dimensional XOR with temporal keys
-        quantumDecrypt: function(data, entropy) {
-            const timeKey = new Date().getTime() % 1000;
-            const browserKey = navigator.userAgent.length % 256;
-            const domKey = document.title.length % 128;
-            const masterKey = (entropy + timeKey + browserKey + domKey) % 65536;
-            
-            return data.map((byte, index) => {
-                const rotationKey = (masterKey * (index + 1) * 31337) % 256;
-                return String.fromCharCode(byte ^ rotationKey ^ (index % 255));
-            }).join('');
-        },
-        
-        // Steganographic Base64 with noise injection
-        stealthBase64: function(encoded) {
-            try {
-                // Remove noise characters
-                const cleaned = encoded.replace(/[^A-Za-z0-9+/=]/g, '');
-                // Ensure proper padding
-                const padded = cleaned + '='.repeat((4 - cleaned.length % 4) % 4);
-                return atob(padded);
-            } catch (e) {
-                return '';
-            }
-        },
-        
-        // Polymorphic character assembly
-        assembleFromCodes: function(codes) {
-            return codes.map(code => String.fromCharCode(code)).join('');
-        }
-    };
-
-    // 2. Classified Contact Data Vault - CORRECTED EMAIL & WHATSAPP PHONE
-    const ClassifiedVault = {
-        email: {
-            // Triple-encrypted layers for reajoan office gmail com
-            layer1: [114, 101, 97, 106, 111, 97, 110, 46, 111, 102, 102, 105, 99, 101, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109], // Character codes
-            layer2: "cmVham9hbi5vZmZpY2VAZ21haWwuY29t", // Base64 encoded
-            layer3: [],
-            entropy: 42069
-        },
-        phone: {
-            layer1: [48, 49, 55, 53, 52, 55, 55, 51, 52, 51, 53], // 01****35
-            layer2: "",
-            layer3: [],
-            entropy: 13337,
-            whatsapp: true // Flag for WhatsApp link
-        }
-    };
-
-// 3. Advanced Threat Detection Matrix 8G
-const ThreatMatrix = {
-    // Multi-vector bot detection
-    detectHostileAgent: function() {
-        const threatVectors = [
-            // User agent analysis - Enhanced with 150+ additional malicious bots
-            /(bot|crawler|spider|scraper|headless|phantom|selenium|puppeteer|playwright|scan|zgrab|nmap|wget|httrack|harvest|grabber|leech|ripper|extractor|spinner|parser|indexer|fetcher|collector|aggregator|surfer|downloader|mirror|sucker|siphon|vacuum|sucker|spambot|seo|searcher|seeker|sniffer|sniff|spy|spyder|stalker|stalk|stealer|stripper|sweeper|vampire|vortex|webreaper|webwhacker|whacker|whack|worm|zombie|zomb|zoom|zoomer|zapper|zap|zeus|zmeu|zune|zyborg|80legs|360spider|abonti|aboundex|acunetix|adbeat|admantx|ahrefs|alexa|amazonaws|amazon|amplitude|analytics|antivirus|apache|appengine|apple|archive|aspiegel|awario|axios|baidu|bing|bitly|blackboard|blexbot|bluecoat|boardreader|bot\s?link|browsershots|buffer|builtwith|burp|capture|censys|checkmark|checker|chrome|clamav|cloudflare|coccoc|comodo|contentlook|copyscape|cortex|crawler|cxense|datanyze|dataprovider|daum|digg|discord|disqus|domain|duckduckgo|exabot|facebook|feedfetcher|feedspot|firefox|gigablast|gluten|go-http-client|google|grapeshot|heritrix|holmes|hsts|hubspot|hybrid|ibm|ichiro|infegy|instagram|internet|ips-agent|ips|java|jetty|jike|jikespider|kaspersky|linkdex|linkedin|ltx71|majestic|meanpath|mediapartners|mega|microsoft|mj12bot|mojeek|monitor|motor|msn|msrbot|naver|netcraft|netsystemsresearch|nimbostratus|nutch|omgili|openindexspider|openvas|orange|owasp|page2rss|panscient|parsijoo|phantomjs|photon|pinterest|postman|probe|profound|python|qq|quora|qwant|reddit|rogerbot|safari|scanner|scrapy|searchmetrics|semrush|seokicks|seoscanners|serpstat|sex|shopify|shodan|sistrix|siteimprove|slack|slurp|smtbot|sogou|soso|spark|sputnik|startmebot|statuscake|stumbleupon|sucuri|symantec|telegram|test|tiktok|tineye|toolbar|trendiction|trendmicro|tumblr|twiceler|twitter|ubermetrics|uclassify|uptime|url|vagabondo|verisign|viber|virustotal|vkshare|voilabot|w3c|weavr|webcollage|webmeup|webtrends|whatsapp|whois|wordpress|wotbox|yahoo|yandex|yisou|youdao|zao|zeustracker|zgrab|zombie|zoom|zscaler)/i.test(navigator.userAgent),
-            // Behavioral analysis
-            !navigator.cookieEnabled,
-            navigator.webdriver === true,
-            window.phantom !== undefined,
-            window.callPhantom !== undefined,
-            // Environment analysis
-            navigator.plugins.length === 0,
-            screen.width < 100 || screen.height < 100,
-            // Timing analysis
-            performance.now() < 100,
-            // Additional checks
-            /([a-z0-9]{2000,})|(&lt;|%0a|%0d|%27|%3c|%3e|%00|0x00|\\x22)/i.test(navigator.userAgent),
-            /(ahrefs|archiver|libwww-perl|pycurl|scan|zgrab|nmap|wget)/i.test(navigator.userAgent),
-            /(oppo\sa33|(c99|php|web)shell|site((.){0,2})copier|backdoor)/i.test(navigator.userAgent),
-            /(base64_decode|bin\/bash|disconnect|eval|unserializ|cmd\.exe)/i.test(navigator.userAgent)
-        ];
-        
-        return threatVectors.filter(Boolean).length > 2;
-    },
-        
-        // Human verification protocol
-        verifyHumanSignature: function() {
-            return new Promise((resolve) => {
-                let humanScore = 0;
-                const requiredScore = 5;
-                
-                // Mouse movement tracking
-                let mouseEvents = 0;
-                const mouseHandler = () => {
-                    mouseEvents++;
-                    if (mouseEvents >= 3) humanScore++;
-                };
-                
-                // Scroll behavior tracking
-                let scrollEvents = 0;
-                const scrollHandler = () => {
-                    scrollEvents++;
-                    if (scrollEvents >= 2) humanScore++;
-                };
-                
-                // Keyboard interaction tracking
-                let keyEvents = 0;
-                const keyHandler = () => {
-                    keyEvents++;
-                    if (keyEvents >= 1) humanScore++;
-                };
-                
-                // Time-based verification
-                setTimeout(() => humanScore++, 2000);
-                setTimeout(() => humanScore++, 5000);
-                
-                // Event listeners
-                document.addEventListener('mousemove', mouseHandler, { passive: true });
-                document.addEventListener('scroll', scrollHandler, { passive: true });
-                document.addEventListener('keydown', keyHandler, { passive: true });
-                
-                // Verification check
-                const checkHuman = () => {
-                    if (humanScore >= requiredScore) {
-                        // Cleanup
-                        document.removeEventListener('mousemove', mouseHandler);
-                        document.removeEventListener('scroll', scrollHandler);
-                        document.removeEventListener('keydown', keyHandler);
-                        resolve(true);
-                    } else {
-                        setTimeout(checkHuman, 1000);
-                    }
-                };
-                
-                setTimeout(checkHuman, 3000);
-                
-                // Fallback timeout
-                setTimeout(() => {
-                    if (humanScore < requiredScore && !this.detectHostileAgent()) {
-                        resolve(true);
-                    }
-                }, 15000);
-            });
-        }
-    };
-
-    // 4. Secure Contact Deployment System
-    const SecureDeployment = {
-        loadingAnimation: null,
-        
-        initializeSecureProtocol: function() {
-            this.activateLoadingSequence();
-            this.executeSecurityProtocol();
-        },
-        
-        activateLoadingSequence: function() {
-            const loadingElements = document.querySelectorAll('.email-loading, .phone-loading');
-            const securityFrames = ['🔒', '🔐'];
-            let frameIndex = 0;
-            
-            this.loadingAnimation = setInterval(() => {
-                frameIndex = (frameIndex + 1) % securityFrames.length;
-                loadingElements.forEach(el => {
-                    if (el && el.textContent) {
-                        el.textContent = `verifying ${securityFrames[frameIndex]}`;
-                    }
-                });
-            }, 200);
-        },
-        
-        executeSecurityProtocol: async function() {
-            try {
-                // Phase 1: Threat Assessment
-                if (ThreatMatrix.detectHostileAgent()) {
-                    this.initiateCountermeasures();
-                    return;
-                }
-                
-                // Phase 2: Human Verification
-                const humanVerified = await ThreatMatrix.verifyHumanSignature();
-                
-                if (humanVerified) {
-                    // Phase 3: Secure Decryption
-                    this.deploySecureContacts();
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start) + (target === 100 ? '%' : target >= 1000 ? '+' : '');
+                    requestAnimationFrame(updateCounter);
                 } else {
+                    element.textContent = target + (target === 100 ? '%' : target >= 1000 ? '+' : '');
+                }
+            }
+            updateCounter();
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('[data-count]');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-count'));
+                        animateCounter(counter, target);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-grid');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        const handleScroll = debounce(() => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        }, 100);
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        scrollToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ==================== MILITARY GRADE CONTACT PROTECTION ====================
+        // 1. Advanced Quantum-Level Encryption System
+        const QuantumVault = {
+            // Multi-dimensional XOR with temporal keys
+            quantumDecrypt: function(data, entropy) {
+                const timeKey = new Date().getTime() % 1000;
+                const browserKey = navigator.userAgent.length % 256;
+                const domKey = document.title.length % 128;
+                const masterKey = (entropy + timeKey + browserKey + domKey) % 65536;
+
+                return data.map((byte, index) => {
+                    const rotationKey = (masterKey * (index + 1) * 31337) % 256;
+                    return String.fromCharCode(byte ^ rotationKey ^ (index % 255));
+                }).join('');
+            },
+
+            // Steganographic Base64 with noise injection
+            stealthBase64: function(encoded) {
+                try {
+                    // Remove noise characters
+                    const cleaned = encoded.replace(/[^A-Za-z0-9+/=]/g, '');
+                    // Ensure proper padding
+                    const padded = cleaned + '='.repeat((4 - cleaned.length % 4) % 4);
+                    return atob(padded);
+                } catch (e) {
+                    return '';
+                }
+            },
+
+            // Polymorphic character assembly
+            assembleFromCodes: function(codes) {
+                return codes.map(code => String.fromCharCode(code)).join('');
+            }
+        };
+
+        // 2. Classified Contact Data Vault - CORRECTED EMAIL & WHATSAPP PHONE
+        const ClassifiedVault = {
+            email: {
+                // Triple-encrypted layers for reajoan office gmail com
+                layer1: [114, 101, 97, 106, 111, 97, 110, 46, 111, 102, 102, 105, 99, 101, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109], // Character codes
+                layer2: "cmVham9hbi5vZmZpY2VAZ21haWwuY29t", // Base64 encoded
+                layer3: [],
+                entropy: 42069
+            },
+            phone: {
+                layer1: [48, 49, 55, 53, 52, 55, 55, 51, 52, 51, 53], // 0 3435
+                layer2: "",
+                layer3: [],
+                entropy: 13337,
+                whatsapp: true // Flag for WhatsApp link
+            }
+        };
+
+        // 3. Advanced Threat Detection Matrix
+        const ThreatMatrix = {
+            // Multi-vector bot detection
+            detectHostileAgent: function() {
+                const threatVectors = [
+                    // User agent analysis - Enhanced with 150+ additional malicious bots
+                    /(bot|crawler|spider|scraper|headless|phantom|selenium|puppeteer|playwright|scan|zgrab|nmap|wget|httrack|harvest|grabber|leech|ripper|extractor|spinner|parser|indexer|fetcher|collector|aggregator|surfer|downloader|mirror|sucker|siphon|vacuum|sucker|spambot|seo|searcher|seeker|sniffer|sniff|spy|spyder|stalker|stalk|stealer|stripper|sweeper|vampire|vortex|webreaper|webwhacker|whacker|whack|worm|zombie|zomb|zoom|zoomer|zapper|zap|zeus|zmeu|zune|zyborg|80legs|360spider|abonti|aboundex|acunetix|adbeat|admantx|ahrefs|alexa|amazonaws|amazon|amplitude|analytics|antivirus|apache|appengine|apple|archive|aspiegel|awario|axios|baidu|bing|bitly|blackboard|blexbot|bluecoat|boardreader|bot\s?link|browsershots|buffer|builtwith|burp|capture|censys|checkmark|checker|chrome|clamav|cloudflare|coccoc|comodo|contentlook|copyscape|cortex|crawler|cxense|datanyze|dataprovider|daum|digg|discord|disqus|domain|duckduckgo|exabot|facebook|feedfetcher|feedspot|firefox|gigablast|gluten|go-http-client|google|grapeshot|heritrix|holmes|hsts|hubspot|hybrid|ibm|ichiro|infegy|instagram|internet|ips-agent|ips|java|jetty|jike|jikespider|kaspersky|linkdex|linkedin|ltx71|majestic|meanpath|mediapartners|mega|microsoft|mj12bot|mojeek|monitor|motor|msn|msrbot|naver|netcraft|netsystemsresearch|nimbostratus|nutch|omgili|openindexspider|openvas|orange|owasp|page2rss|panscient|parsijoo|phantomjs|photon|pinterest|postman|probe|profound|python|qq|quora|qwant|reddit|rogerbot|safari|scanner|scrapy|searchmetrics|semrush|seokicks|seoscanners|serpstat|sex|shopify|shodan|sistrix|siteimprove|slack|slurp|smtbot|sogou|soso|spark|sputnik|startmebot|statuscake|stumbleupon|sucuri|symantec|telegram|test|tiktok|tineye|toolbar|trendiction|trendmicro|tumblr|twiceler|twitter|ubermetrics|uclassify|uptime|url|vagabondo|verisign|viber|virustotal|vkshare|voilabot|w3c|weavr|webcollage|webmeup|webtrends|whatsapp|whois|wordpress|wotbox|yahoo|yandex|yisou|youdao|zao|zeustracker|zgrab|zombie|zoom|zscaler)/i.test(navigator.userAgent),
+
+                    // Behavioral analysis
+                    !navigator.cookieEnabled,
+                    navigator.webdriver === true,
+                    window.phantom !== undefined,
+                    window.callPhantom !== undefined,
+
+                    // Environment analysis
+                    navigator.plugins.length === 0,
+                    screen.width < 100 || screen.height < 100,
+
+                    // Timing analysis
+                    performance.now() < 100,
+
+                    // Additional checks
+                    /([a-z0-9]{2000,})|(&lt;|%0a|%0d|%27|%3c|%3e|%00|0x00|\\x22)/i.test(navigator.userAgent),
+                    /(ahrefs|archiver|libwww-perl|pycurl|scan|zgrab|nmap|wget)/i.test(navigator.userAgent),
+                    /(oppo\sa33|(c99|php|web)shell|site((.){0,2})copier|backdoor)/i.test(navigator.userAgent),
+                    /(base64_decode|bin\/bash|disconnect|eval|unserializ|cmd\.exe)/i.test(navigator.userAgent)
+                ];
+
+                return threatVectors.filter(Boolean).length > 2;
+            },
+
+            // Human verification protocol
+            verifyHumanSignature: function() {
+                return new Promise((resolve) => {
+                    let humanScore = 0;
+                    const requiredScore = 5;
+
+                    // Mouse movement tracking
+                    let mouseEvents = 0;
+                    const mouseHandler = () => {
+                        mouseEvents++;
+                        if (mouseEvents >= 3) humanScore++;
+                    };
+
+                    // Scroll behavior tracking
+                    let scrollEvents = 0;
+                    const scrollHandler = () => {
+                        scrollEvents++;
+                        if (scrollEvents >= 2) humanScore++;
+                    };
+
+                    // Keyboard interaction tracking
+                    let keyEvents = 0;
+                    const keyHandler = () => {
+                        keyEvents++;
+                        if (keyEvents >= 1) humanScore++;
+                    };
+
+                    // Time-based verification
+                    setTimeout(() => humanScore++, 2000);
+                    setTimeout(() => humanScore++, 5000);
+
+                    // Event listeners
+                    document.addEventListener('mousemove', mouseHandler, { passive: true });
+                    document.addEventListener('scroll', scrollHandler, { passive: true });
+                    document.addEventListener('keydown', keyHandler, { passive: true });
+
+                    // Verification check
+                    const checkHuman = () => {
+                        if (humanScore >= requiredScore) {
+                            // Cleanup
+                            document.removeEventListener('mousemove', mouseHandler);
+                            document.removeEventListener('scroll', scrollHandler);
+                            document.removeEventListener('keydown', keyHandler);
+                            resolve(true);
+                        } else {
+                            setTimeout(checkHuman, 1000);
+                        }
+                    };
+
+                    setTimeout(checkHuman, 3000);
+
+                    // Fallback timeout
+                    setTimeout(() => {
+                        if (humanScore < requiredScore && !this.detectHostileAgent()) {
+                            resolve(true);
+                        }
+                    }, 15000);
+                });
+            }
+        };
+
+        // 4. Secure Contact Deployment System
+        const SecureDeployment = {
+            loadingAnimation: null,
+
+            initializeSecureProtocol: function() {
+                this.activateLoadingSequence();
+                this.executeSecurityProtocol();
+            },
+
+            activateLoadingSequence: function() {
+                const loadingElements = document.querySelectorAll('.email-loading, .phone-loading');
+                const securityFrames = ['🔒', '🔐'];
+                let frameIndex = 0;
+
+                this.loadingAnimation = setInterval(() => {
+                    frameIndex = (frameIndex + 1) % securityFrames.length;
+                    loadingElements.forEach(el => {
+                        if (el && el.textContent) {
+                            el.textContent = `verifying ${securityFrames[frameIndex]}`;
+                        }
+                    });
+                }, 200);
+            },
+
+            executeSecurityProtocol: async function() {
+                try {
+                    // Phase 1: Threat Assessment
+                    if (ThreatMatrix.detectHostileAgent()) {
+                        this.initiateCountermeasures();
+                        return;
+                    }
+
+                    // Phase 2: Human Verification
+                    const humanVerified = await ThreatMatrix.verifyHumanSignature();
+                    if (humanVerified) {
+                        // Phase 3: Secure Decryption
+                        this.deploySecureContacts();
+                    } else {
+                        this.initiateCountermeasures();
+                    }
+                } catch (error) {
+                    console.error('Security protocol error:', error);
                     this.initiateCountermeasures();
                 }
-                
-            } catch (error) {
-                console.error('Security protocol error:', error);
-                this.initiateCountermeasures();
-            }
-        },
-        
-        deploySecureContacts: function() {
-            try {
+            },
+
+            deploySecureContacts: function() {
+                try {
+                    if (this.loadingAnimation) {
+                        clearInterval(this.loadingAnimation);
+                    }
+
+                    // Decrypt email using quantum vault
+                    let email = '';
+                    const emailData = ClassifiedVault.email;
+
+                    // Attempt multiple decryption methods
+                    if (emailData.layer2) {
+                        email = QuantumVault.stealthBase64(emailData.layer2);
+                    }
+                    if (!email && emailData.layer1.length > 0) {
+                        email = QuantumVault.assembleFromCodes(emailData.layer1);
+                    }
+
+                    // Decrypt phone using quantum vault
+                    let phone = '';
+                    const phoneData = ClassifiedVault.phone;
+                    if (phoneData.layer1.length > 0) {
+                        phone = QuantumVault.assembleFromCodes(phoneData.layer1);
+                    }
+
+                    // Deploy contacts if successfully decrypted
+                    if (email) {
+                        this.renderSecureContact('email', email, 'mailto:');
+                    }
+                    if (phone) {
+                        // Use WhatsApp link instead of tel: for phone
+                        this.renderSecureContact('phone', phone, 'https://wa.me/880');
+                    }
+
+                    // Initiate data destruction sequence
+                    this.initiateDataDestruction();
+
+                } catch (error) {
+                    console.error('Deployment error:', error);
+                    this.initiateCountermeasures();
+                }
+            },
+
+            renderSecureContact: function(type, value, prefix) {
+                const elements = document.querySelectorAll(`.${type}-loading`);
+                elements.forEach(el => {
+                    if (el) {
+                        try {
+                            const secureLink = document.createElement('a');
+                            
+                            // Special handling for WhatsApp phone links
+                            if (type === 'phone') {
+                                secureLink.href = `${prefix}${value}`;
+                                secureLink.target = '_blank';
+                                secureLink.rel = 'noopener noreferrer';
+                            } else {
+                                secureLink.href = `${prefix}${value}`;
+                            }
+                            
+                            secureLink.textContent = value;
+                            secureLink.setAttribute('data-secure', 'true');
+                            secureLink.setAttribute('data-classified', type);
+                            secureLink.setAttribute('aria-label', `Secure ${type} contact`);
+                            
+                            // Anti-forensics attributes
+                            secureLink.style.userSelect = 'none';
+                            secureLink.addEventListener('contextmenu', (e) => e.preventDefault());
+                            
+                            // Secure replacement
+                            el.parentNode.replaceChild(secureLink, el);
+                            
+                        } catch (error) {
+                            console.error(`Secure rendering error for ${type}:`, error);
+                            el.textContent = 'CLASSIFIED';
+                        }
+                    }
+                });
+            },
+
+            initiateCountermeasures: function() {
                 if (this.loadingAnimation) {
                     clearInterval(this.loadingAnimation);
                 }
-                
-                // Decrypt email using quantum vault
-                let email = '';
-                const emailData = ClassifiedVault.email;
-                
-                // Attempt multiple decryption methods
-                if (emailData.layer2) {
-                    email = QuantumVault.stealthBase64(emailData.layer2);
-                }
-                
-                if (!email && emailData.layer1.length > 0) {
-                    email = QuantumVault.assembleFromCodes(emailData.layer1);
-                }
-                
-                // Decrypt phone using quantum vault
-                let phone = '';
-                const phoneData = ClassifiedVault.phone;
-                
-                if (phoneData.layer1.length > 0) {
-                    phone = QuantumVault.assembleFromCodes(phoneData.layer1);
-                }
-                
-                // Deploy contacts if successfully decrypted
-                if (email) {
-                    this.renderSecureContact('email', email, 'mailto:');
-                }
-                if (phone) {
-                    // Use WhatsApp link instead of tel: for phone
-                    this.renderSecureContact('phone', phone, 'https://wa.me/880');
-                }
-                
-                // Initiate data destruction sequence
-                this.initiateDataDestruction();
-                
-            } catch (error) {
-                console.error('Deployment error:', error);
-                this.initiateCountermeasures();
-            }
-        },
-        
-        renderSecureContact: function(type, value, prefix) {
-            const elements = document.querySelectorAll(`.${type}-loading`);
-            elements.forEach(el => {
-                if (el) {
-                    try {
-                        const secureLink = document.createElement('a');
-                        
-                        // Special handling for WhatsApp phone links
-                        if (type === 'phone') {
-                            secureLink.href = `${prefix}${value}`;
-                            secureLink.target = '_blank';
-                            secureLink.rel = 'noopener noreferrer';
-                        } else {
-                            secureLink.href = `${prefix}${value}`;
-                        }
-                        
-                        secureLink.textContent = value;
-                        secureLink.setAttribute('data-secure', 'true');
-                        secureLink.setAttribute('data-classified', type);
-                        secureLink.setAttribute('aria-label', `Secure ${type} contact`);
-                        
-                        // Anti-forensics attributes
-                        secureLink.style.userSelect = 'none';
-                        secureLink.addEventListener('contextmenu', (e) => e.preventDefault());
-                        
-                        // Secure replacement
-                        el.parentNode.replaceChild(secureLink, el);
-                    } catch (error) {
-                        console.error(`Secure rendering error for ${type}:`, error);
-                        el.textContent = 'CLASSIFIED';
+
+                const loadingElements = document.querySelectorAll('.email-loading, .phone-loading');
+                loadingElements.forEach(el => {
+                    if (el) {
+                        el.textContent = 'ACCESS DENIED';
+                        el.style.color = '#ef4444';
+                        el.style.fontWeight = 'bold';
                     }
-                }
-            });
-        },
-        
-        initiateCountermeasures: function() {
-            if (this.loadingAnimation) {
-                clearInterval(this.loadingAnimation);
-            }
-            
-            const loadingElements = document.querySelectorAll('.email-loading, .phone-loading');
-            loadingElements.forEach(el => {
-                if (el) {
-                    el.textContent = 'ACCESS DENIED';
-                    el.style.color = '#ef4444';
-                    el.style.fontWeight = 'bold';
-                }
-            });
-            
-            console.warn('🚨 SECURITY BREACH DETECTED - COUNTERMEASURES ACTIVE');
-        },
-        
-        initiateDataDestruction: function() {
-            // Destroy sensitive data after deployment
-            setTimeout(() => {
-                // Overwrite vault data
-                if (ClassifiedVault.email) {
-                    ClassifiedVault.email.layer1 = [];
-                    ClassifiedVault.email.layer2 = '';
-                    ClassifiedVault.email.layer3 = [];
-                }
-                if (ClassifiedVault.phone) {
-                    ClassifiedVault.phone.layer1 = [];
-                }
-                
-                // Nullify quantum functions
-                QuantumVault.quantumDecrypt = null;
-                QuantumVault.stealthBase64 = null;
-                QuantumVault.assembleFromCodes = null;
-                
-                console.log('🔥 Data destruction sequence completed');
-            }, 10000);
-        }
-    };
-
-    // 5. Initialize Military Grade Security Protocol
-    document.addEventListener('DOMContentLoaded', () => {
-        // Delayed initialization to avoid detection
-        const initDelay = Math.random() * 2000 + 1000;
-        
-        setTimeout(() => {
-            try {
-                SecureDeployment.initializeSecureProtocol();
-            } catch (error) {
-                console.error('Security initialization failed:', error);
-                SecureDeployment.initiateCountermeasures();
-            }
-        }, initDelay);
-    });
-
-    // Service Worker Registration for Offline Caching
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-                .then(registration => {
-                    console.log('SW registered: ', registration);
-                })
-                .catch(registrationError => {
-                    console.log('SW registration failed: ', registrationError);
                 });
-        });
-    }
 
-    // Lazy loading for images
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    if (img.dataset.src) {
-                        img.src = img.dataset.src;
-                        img.classList.remove('skeleton');
-                        imageObserver.unobserve(img);
+                console.warn('🚨 SECURITY BREACH DETECTED - COUNTERMEASURES ACTIVE');
+            },
+
+            initiateDataDestruction: function() {
+                // Destroy sensitive data after deployment
+                setTimeout(() => {
+                    // Overwrite vault data
+                    if (ClassifiedVault.email) {
+                        ClassifiedVault.email.layer1 = [];
+                        ClassifiedVault.email.layer2 = '';
+                        ClassifiedVault.email.layer3 = [];
                     }
-                }
-            });
-        });
-
-        document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img);
-        });
-    }
-
-    // Performance monitoring
-    if ('PerformanceObserver' in window) {
-        try {
-            const perfObserver = new PerformanceObserver((list) => {
-                for (const entry of list.getEntries()) {
-                    if (entry.entryType === 'largest-contentful-paint') {
-                        console.log('LCP:', entry.startTime);
+                    if (ClassifiedVault.phone) {
+                        ClassifiedVault.phone.layer1 = [];
                     }
+
+                    // Nullify quantum functions
+                    QuantumVault.quantumDecrypt = null;
+                    QuantumVault.stealthBase64 = null;
+                    QuantumVault.assembleFromCodes = null;
+
+                    console.log('🔥 Data destruction sequence completed');
+                }, 10000);
+            }
+        };
+
+        // 5. Initialize Military Grade Security Protocol
+        document.addEventListener('DOMContentLoaded', () => {
+            // Delayed initialization to avoid detection
+            const initDelay = Math.random() * 2000 + 1000;
+            setTimeout(() => {
+                try {
+                    SecureDeployment.initializeSecureProtocol();
+                } catch (error) {
+                    console.error('Security initialization failed:', error);
+                    SecureDeployment.initiateCountermeasures();
                 }
+            }, initDelay);
+        });
+
+        // Service Worker Registration for Offline Caching
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
             });
-            perfObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        } catch (error) {
-            console.log('Performance observer not supported');
         }
-    }
-</script>
+
+        // Lazy loading for images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('skeleton');
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Performance monitoring
+        if ('PerformanceObserver' in window) {
+            try {
+                const perfObserver = new PerformanceObserver((list) => {
+                    for (const entry of list.getEntries()) {
+                        if (entry.entryType === 'largest-contentful-paint') {
+                            console.log('LCP:', entry.startTime);
+                        }
+                    }
+                });
+                perfObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+            } catch (error) {
+                console.log('Performance observer not supported');
+            }
+        }
+
+        // Global function for mobile menu
+        window.closeMobileMenu = closeMobileMenu;
+    </script>
 </body>
 </html>
