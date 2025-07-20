@@ -1,6 +1,6 @@
 // A unique name for your cache. Update this version number (e.g., v1.1 to v1.2)
 // whenever you make changes to index.html or other assets listed below.
-const CACHE_NAME = '20-7-2025'; 
+const CACHE_NAME = '20-7-2025v2'; 
 
 // List of all URLs that your single page needs to function offline.
 // - '/': Covers the root URL when accessed directly.
