@@ -1,107 +1,139 @@
-// A unique name for your cache. Update this version number (e.g., v1.1 to v1.2)
-// whenever you make changes to index.html or other assets listed below.
-const CACHE_NAME = '22-7-2025v2'; 
+// Service Worker for MD. Reajoan Portfolio (Enhanced for PWA)
 
-// List of all URLs that your single page needs to function offline.
-// - '/': Covers the root URL when accessed directly.
-// - '/index.html': The specific HTML file.
-// - 'https://avatars.githubusercontent.com/u/29954535?v=4': Your profile image URL.
-// Add any other external images, video, or audio files your page explicitly links to if you want them cached.
+const CACHE_NAME = '22-7-2025v2';
+const OFFLINE_URL = '/offline.html'; // Optional fallback page
+
+// Core assets to cache for offline functionality
 const urlsToCache = [
-  '/', 
+  // HTML
+  '/',
   '/index.html',
-  'https://avatars.githubusercontent.com/u/29954535?v=4', // Ensure this URL is correct
-  // Note: Google Fonts URLs are typically handled with a more advanced runtime caching strategy
-  // if full offline font support is critical, but this basic setup covers your main page.
-  // For basic offline, fonts might not load, but the site structure will be there.
+  
+  // Manifest and icons
+  '/manifest.json',
+  'data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 192 192\'><rect width=\'192\' height=\'192\' rx=\'38\' fill=\'%2310b981\'/><text x=\'96\' y=\'125\' font-family=\'Arial\' font-size=\'68\' font-weight=\'bold\' text-anchor=\'middle\' fill=\'white\'>MR</text></svg>',
+  
+  // Profile image
+  'https://avatars.githubusercontent.com/u/29954535?v=4',
+  
+  // Google Fonts (Inter)
+  'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap',
+  'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf',
+  'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZs.ttf'
 ];
 
-// 1. Install Event: Triggered when the service worker is installed for the first time.
-// This is where you typically cache your 'app shell' (core UI and static assets).
+// ===== INSTALL EVENT =====
 self.addEventListener('install', (event) => {
-  console.log('Service Worker: Installing...');
-  event.waitUntil( // Ensures the service worker doesn't install until the caching is complete
-    caches.open(CACHE_NAME) // Opens the named cache
+  console.log('[Service Worker] Installing...');
+  
+  event.waitUntil(
+    caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('Service Worker: Caching App Shell');
-        return cache.addAll(urlsToCache); // Adds all specified URLs to the cache
-      })
-      .catch((error) => {
-        console.error('Service Worker: Failed to cache during install', error);
+        console.log('[Service Worker] Caching core assets');
+        return cache.addAll(urlsToCache)
+          .then(() => {
+            console.log('[Service Worker] All assets cached');
+          })
+          .catch((error) => {
+            console.error('[Service Worker] Cache addAll error:', error);
+          });
       })
   );
 });
 
-// 2. Activate Event: Triggered when the service worker takes control of the page.
-// This is used to clean up old caches, ensuring users always get the latest version.
+// ===== ACTIVATE EVENT =====
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker: Activating...');
+  console.log('[Service Worker] Activating...');
+  
+  // Clean up old caches
   event.waitUntil(
-    caches.keys().then((cacheNames) => { // Gets all cache names
-      return Promise.all( // Waits for all old caches to be deleted
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
         cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) { // If a cache name doesn't match the current one
-            console.log('Service Worker: Deleting old cache:', cacheName);
-            return caches.delete(cacheName); // Delete the old cache
+          if (cacheName !== CACHE_NAME) {
+            console.log('[Service Worker] Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
           }
         })
       );
     })
   );
-  // This line ensures the service worker takes control of the page immediately after activation.
-  event.waitUntil(self.clients.claim()); 
+  
+  // Take control of all clients immediately
+  event.waitUntil(self.clients.claim());
 });
 
-// 3. Fetch Event: Intercepts network requests made by the page.
-// This defines how your PWA responds to network requests (e.g., serve from cache first, then network).
+// ===== FETCH EVENT =====
 self.addEventListener('fetch', (event) => {
-  // Only intercept GET requests and requests from your own origin for basic caching.
-  // This avoids issues with third-party tracking pixels, ads, etc.
-  if (event.request.method !== 'GET' || !event.request.url.startsWith(self.location.origin)) {
-    // For cross-origin resources (like Google Fonts) not explicitly in urlsToCache,
-    // they will be fetched normally from the network if online.
-    return; 
+  // Skip non-GET requests and cross-origin requests (except those we want to cache)
+  if (event.request.method !== 'GET') return;
+  
+  const requestUrl = new URL(event.request.url);
+  
+  // Network-first for API calls, cache-first for assets
+  if (event.request.url.includes('/api/')) {
+    event.respondWith(networkFirstStrategy(event));
+  } else {
+    event.respondWith(cacheFirstStrategy(event));
   }
+});
 
-  event.respondWith( // Responds to the fetch request
-    caches.match(event.request) // Tries to find the request in the cache
-      .then((response) => {
-        // If a match is found in the cache, return it
-        if (response) {
-          return response;
-        }
-
-        // If not found in cache, fetch from the network
-        const fetchRequest = event.request.clone(); // Clone the request because it's a stream
-
-        return fetch(fetchRequest)
-          .then((networkResponse) => {
-            // Check if we received a valid response from the network
-            if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-              return networkResponse; // Return invalid responses as is
-            }
-
-            // If valid, clone the response to store it in cache and return to browser
-            const responseToCache = networkResponse.clone(); 
-
-            caches.open(CACHE_NAME) // Open the current cache
-              .then((cache) => {
-                cache.put(event.request, responseToCache); // Store the network response in cache
+// ===== STRATEGIES =====
+function cacheFirstStrategy(event) {
+  return caches.match(event.request)
+    .then((cachedResponse) => {
+      // Return cached response if found
+      if (cachedResponse) {
+        console.log(`[Service Worker] Serving from cache: ${event.request.url}`);
+        return cachedResponse;
+      }
+      
+      // Otherwise fetch from network
+      return fetch(event.request)
+        .then((networkResponse) => {
+          // Check if valid response
+          if (!networkResponse.ok) throw new Error('Network response not OK');
+          
+          // Clone and cache the response
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME)
+            .then((cache) => cache.put(event.request, responseToCache));
+          
+          return networkResponse;
+        })
+        .catch(() => {
+          // If both cache and network fail, show offline page for navigation requests
+          if (event.request.mode === 'navigate') {
+            return caches.match(OFFLINE_URL) || 
+              new Response('<h1>You are offline</h1><p>Please check your connection.</p>', {
+                headers: { 'Content-Type': 'text/html' }
               });
+          }
+          return new Response('Offline - Content not available', { status: 503 });
+        });
+    });
+}
 
-            return networkResponse; // Return the network response to the page
-          })
-          .catch((error) => {
-            // This catch block handles network failures (e.g., user is offline)
-            console.error('Service Worker: Fetch failed. Network likely offline or resource not cached.', error);
-            // If network fails and the resource isn't in cache, you might serve a custom offline page here
-            // if (event.request.mode === 'navigate') { 
-            //   return caches.match('/offline.html'); // Assuming you have an offline.html
-            // }
-            // For other resource types (images, etc.), you might just return an empty/error response.
-            // For a basic portfolio, falling back to cached content is the primary goal.
-            return new Response('Network error or content not in cache.', { status: 503, headers: { 'Content-Type': 'text/plain' } });
-          });
-      })
-  );
+function networkFirstStrategy(event) {
+  return fetch(event.request)
+    .then((networkResponse) => {
+      // Update cache with fresh API response
+      const responseToCache = networkResponse.clone();
+      caches.open(CACHE_NAME)
+        .then((cache) => cache.put(event.request, responseToCache));
+      
+      return networkResponse;
+    })
+    .catch(() => {
+      // Fall back to cache if network fails
+      return caches.match(event.request);
+    });
+}
+
+// ===== BACKGROUND SYNC (OPTIONAL) =====
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'sync-data') {
+    console.log('[Service Worker] Background sync triggered');
+    // Implement your background sync logic here
+  }
 });
