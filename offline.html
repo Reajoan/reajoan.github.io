@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline | MD. Reajoan Portfolio</title>
+    <style>
+        :root {
+            --primary: #10b981;
+            --primary-dark: #0d9488;
+            --text: #1f2937;
+            --light-bg: #f3f4f6;
+            --dark-bg: #111827;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--light-bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .nav-logo {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .offline-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .offline-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            color: #4b5563;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin: 0.5rem;
+        }
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        footer {
+            background: var(--dark-bg);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-info {
+            margin-top: 1.5rem;
+        }
+        .contact-item {
+            display: inline-block;
+            margin: 0 1rem;
+        }
+        /* Style for loading state (optional) */
+        .contact-loading {
+            color: #9ca3af; /* A light grey to indicate loading */
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .btn {
+                display: block;
+                margin: 0.5rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="nav-brand">
+                <div class="nav-logo">MR</div>
+                <span>MD. REAJOAN</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container offline-content">
+            <div class="offline-icon">MR</div>
+            <h1>You're Offline</h1>
+            <p>Don't worry! You can still access my portfolio's main content. Here's what you can do:</p>
+
+            <div>
+                <a href="/" class="btn">Return to Homepage</a>
+                <a href="#contact" class="btn btn-outline">View Contact Info</a>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: left;">
+                <h2 style="font-size: 1.25rem; color: var(--text); border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; display: inline-block;">
+                    Available Offline Content
+                </h2>
+                <ul style="margin-top: 1rem;">
+                    <li>Homepage with my portfolio</li>
+                    <li>About me section</li>
+                    <li>Key project examples</li>
+                    <li>Contact information</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h2 style="margin-bottom: 1rem;">MD. Reajoan</h2>
+            <p>Professional Graphic Designer & Branding Specialist</p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span class="contact-loading email-loading">Loading Email...</span>
+                </div>
+                <div class="contact-item">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    <span class="contact-loading phone-loading">Loading Phone...</span>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem; font-size: 0.875rem;">
+                &copy; <script>document.write(new Date().getFullYear())</script> MD. Reajoan. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to check if back online
+        function checkOnlineStatus() {
+            if (navigator.onLine) {
+                // If back online, redirect to the main page
+                window.location.href = '/';
+            }
+        }
+        // Check every 3 seconds
+        setInterval(checkOnlineStatus, 3000);
+
+        // ==================== Streamlined Contact Obfuscation System 🛡️ ====================
+        console.warn('🔒 Contact information obfuscation active. This helps deter basic web scrapers.');
+
+        // 1. Obfuscated Contact Data (Character Codes)
+        // To generate these codes, open your browser console and type:
+        // "your.email@example.com".split('').map(char => char.charCodeAt(0))
+        // "1234567890".split('').map(char => char.charCodeAt(0))
+        const obfuscatedContacts = {
+            emailParts: [114, 101, 97, 106, 111, 97, 110, 46, 111, 102, 102, 105, 99, 101, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109],
+            phoneParts: [48, 49, 55, 53, 52, 55, 55, 51, 52, 51, 53]
+        };
+
+        // 2. Simple Assembly Function: Converts character codes back to a readable string.
+        function assembleContact(partsArray) {
+            return partsArray.map(charCode => String.fromCharCode(charCode)).join('');
+        }
+
+        // 3. Deployment Logic: Decodes and displays contact info on the page.
+        function deployContacts() {
+            // Select all elements with the 'email-loading' class
+            const emailElements = document.querySelectorAll('.email-loading');
+            // Select all elements with the 'phone-loading' class
+            const phoneElements = document.querySelectorAll('.phone-loading');
+
+            // Simulate a small delay for a "loading" effect (purely cosmetic), then display the real contact info.
+            setTimeout(() => {
+                const email = assembleContact(obfuscatedContacts.emailParts);
+                const phone = assembleContact(obfuscatedContacts.phoneParts);
+
+                // Iterate over all found email elements and update them
+                emailElements.forEach(el => {
+                    // Create an <a> tag for the email link
+                    const emailLink = document.createElement('a');
+                    emailLink.href = `mailto:${email}`;
+                    emailLink.textContent = email;
+                    el.innerHTML = ''; // Clear "Loading Email..."
+                    el.appendChild(emailLink); // Append the actual link
+                    el.classList.remove('contact-loading', 'email-loading');
+                });
+
+                // Iterate over all found phone elements and update them
+                phoneElements.forEach(el => {
+                    // Create an <a> tag for the phone link
+                    const phoneLink = document.createElement('a');
+                    phoneLink.href = `tel:${phone}`;
+                    phoneLink.textContent = phone;
+                    el.innerHTML = ''; // Clear "Loading Phone..."
+                    el.appendChild(phoneLink); // Append the actual link
+                    el.classList.remove('contact-loading', 'phone-loading');
+                });
+
+                console.log('✅ Contact information successfully displayed in all locations.');
+            }, 1000); // 1-second delay for the effect
+        }
+
+        // Call deployContacts once the DOM is fully loaded.
+        // This will override any placeholders, including those from localStorage if the main page didn't set them.
+        document.addEventListener('DOMContentLoaded', deployContacts);
+    </script>
+</body>
+</html>
