@@ -1,6 +1,6 @@
 // Service Worker for MD. Reajoan Portfolio (Enhanced for PWA)
 
-const CACHE_NAME = '23-7-2025';
+const CACHE_NAME = '26-7-2025';
 const OFFLINE_URL = '/offline.html'; // Optional fallback page
 
 // Core assets to cache for offline functionality
